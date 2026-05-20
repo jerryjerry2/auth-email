@@ -12,5 +12,8 @@ router.get('/me', authMiddleware.islogin, getMe);
 router.delete('/logout', authMiddleware.islogin, logout);
 router.get('/verify-email', verifyEmail);
 router.put('/resend-verificationEmail', resendVerificationEmail);
+router.get('/test', (req, res) => {
+    res.send('Hello new code')
+})
 
 module.exports = router;
